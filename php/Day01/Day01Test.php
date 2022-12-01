@@ -9,34 +9,40 @@ class Day01Test extends TestCase
 
     public function testPart_01_sample()
     {
-        $partOne = partOne(getInput("input-sample.txt"));
+        $highiestTotalCaloriesCarriedByOneElve = partOne(getInput("input-sample.txt"));
 
-        $this->assertEquals(24000, $partOne);
+        $this->assertEquals(24000, $highiestTotalCaloriesCarriedByOneElve);
     }
-    
+
     public function testPart_01()
     {
-        $partOne = partOne(getInput());
+        $result = partOne(getInput("input.txt"));
 
-        $this->assertEquals(42, $partOne);
+        $this->assertEquals($result, 42);
+    }
+
+    public function testPart_02_sample()
+    {
+        $result = partOne(getInput("input-sample.txt"));
+
+        $this->assertEquals($result, 42);
     }
 
     public function testPart_02()
     {
-        $partTwo = partTwo(getInput());
+        $partTwo = partTwo(getInput("input.txt"));
 
-        $this->assertEquals(42, $partTwo);
+        $this->assertEquals(207576, $partTwo);
     }
-
-
 
 }
 
-function getInput($fileName= "input.txt")
+function getInput($fileName = "input.txt")
 {
-    $delimiter = "\n";
-    $useIncludePath=true;
-    return explode($delimiter, trim(file_get_contents( $fileName,$useIncludePath)));
+    return explode(
+        "\n",
+        trim(file_get_contents($fileName,
+            true)));
 }
 
 ?>

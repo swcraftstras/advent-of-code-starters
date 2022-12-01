@@ -1,1 +1,1 @@
-docker compose run --rm php-7-4
+docker compose run php-7-4

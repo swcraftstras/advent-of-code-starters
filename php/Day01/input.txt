@@ -1,4 +1,1 @@
-104451
-112406
-109733
-86460
+Replace with input from challenge
