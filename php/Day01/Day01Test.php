@@ -9,9 +9,9 @@ class Day01Test extends TestCase
 
     public function testPart_01_sample()
     {
-        $partOne = partOne(getInput());
+        $partOne = partOne(getInput("input-sample.txt"));
 
-        $this->assertEquals(42, $partOne);
+        $this->assertEquals(24000, $partOne);
     }
     
     public function testPart_01()
@@ -32,10 +32,11 @@ class Day01Test extends TestCase
 
 }
 
-function getInput($delimiter = "\n")
+function getInput($fileName= "input.txt")
 {
+    $delimiter = "\n";
     $useIncludePath=true;
-    return explode($delimiter, trim(file_get_contents( 'input.txt',$useIncludePath)));
+    return explode($delimiter, trim(file_get_contents( $fileName,$useIncludePath)));
 }
 
 ?>
