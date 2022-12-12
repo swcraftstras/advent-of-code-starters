@@ -1,13 +1,24 @@
+use std::{fs, vec};
+
 fn main() {
-    println!("Hello, world!");
+    println!("Day x");
+    let file_path = "resources/input.txt";
+    let content = fs::read_to_string(file_path).expect("Cannot read file");
+    let lines = content.split("\n").collect();
+
+    // implement solution
 }
 
 #[cfg(test)]
-mod tests { 
+mod tests {
+    use super::*;
 
     #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
+    fn rename_me() {
+        // arrange
+
+        // act
+
+        // assert
     }
 }
